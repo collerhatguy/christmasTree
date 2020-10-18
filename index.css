@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    background-color: blue;
+}
+.trunk {
+    width: 10vw;
+    height: 20vw;
+    background-color: brown;
+    position: absolute;
+    bottom: 0px;
+}
+.trunk::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: green;
+    border-width: 20vw 40vh;
+    z-index: 2;
+}
+.ornament1 {
+    width: 0px;
+    height: 0px;
+    border-color: yellow;
+    border-width: 10vw;
+    border-radius: 100%;
+}
+.ornament2 {
+    width: 0px;
+    height: 0px;
+    border-color: white;
+    border-width: 10vw;
+    border-radius: 100%;
+}
+.ornament3 {
+    width: 0px;
+    height: 0px;
+    border-color: purple;
+    border-width: 10vw;
+    border-radius: 100%;
+}
