@@ -1,46 +1,95 @@
 body {
     display: flex;
-    height: 100vh;
+    height: 90vh;
     justify-content: center;
     align-content: center;
     background-color: blue;
+}
+.moon {
+    width: 20vh;
+    height: 20vh;
+    background-color: grey;
+    border-radius: 100%;
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+}
+.snow {
+    height: 30vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
 }
 .trunk {
     width: 10vw;
     height: 20vw;
     background-color: brown;
     position: absolute;
-    bottom: 0px;
+    bottom: 30vh;
+    z-index: 1;
 }
-.trunk::after {
-    content: "";
+.leaves {
     width: 0px;
     height: 0px;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: green;
-    border-width: 20vw 40vh;
+    position: absolute;
+    top: -12vw;
+    left: -5vw;
+    border-bottom: 20vw solid green;
+    border-left: 10vw solid transparent;
+    border-right: 10vw solid transparent;
+    border-top: 0vw solid transparent;
     z-index: 2;
 }
 .ornament1 {
-    width: 0px;
-    height: 0px;
-    border-color: yellow;
-    border-width: 10vw;
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: 15vw;
+    left: 3vw;
+    background-color: yellow;
     border-radius: 100%;
 }
 .ornament2 {
-    width: 0px;
-    height: 0px;
-    border-color: white;
-    border-width: 10vw;
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: 12vw;
+    right: 2vw;
+    background-color: aquamarine;
     border-radius: 100%;
+
 }
 .ornament3 {
-    width: 0px;
-    height: 0px;
-    border-color: purple;
-    border-width: 10vw;
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: 5vw;
+    right: -1vw;
+    background-color: purple;
     border-radius: 100%;
+}
+.gift1 {
+    width: 5vw;
+    height: 5vw;
+    background-color: red;
+    position: absolute;
+    bottom: 30vh;
+    transform: translate(7.5vw);
+}
+.gift2 {
+    width: 5vw;
+    height: 5vw;
+    background-color: green;
+    position: absolute;
+    bottom: 30vh;
+    transform: translate(-7.5vw);
+}
+.gift3 {
+    width: 5vw;
+    height: 5vw;
+    background-color: purple;
+    position: absolute;
+    bottom: 30vh;
+    transform: translateX(7.5vw) translateY(-5vw);
 }
