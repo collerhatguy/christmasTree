@@ -6,13 +6,49 @@ body {
     background-color: blue;
 }
 .moon {
-    width: 20vh;
-    height: 20vh;
+    width: 10vw;
+    height: 10vw;
     background-color: grey;
     border-radius: 100%;
     position: absolute;
     top: 5vh;
     left: 5vh;
+}
+.snowFlake1 {
+    width: 1vw;
+    height: 1vw;
+    background-color: white;
+    border-radius: 100%;    
+    position: absolute;
+    right: 15vw;
+    animation: descent 5s linear infinite forwards;
+}
+.snowFlake2 {
+    width: 1vw;
+    height: 1vw;
+    background-color: white;
+    border-radius: 100%;    
+    position: absolute;
+    right: 25vw;
+    animation: descent 5s 2s linear infinite forwards;
+}
+.snowFlake3 {
+    width: 1vw;
+    height: 1vw;
+    background-color: white;
+    border-radius: 100%;    
+    position: absolute;
+    right: 35vw;
+    animation: descent 5s 3s linear infinite forwards;
+}
+.snowFlake4 {
+    width: 1vw;
+    height: 1vw;
+    background-color: white;
+    border-radius: 100%;    
+    position: absolute;
+    right: 70vw;
+    animation: descent 5s 4s linear infinite forwards;
 }
 .snow {
     height: 30vh;
@@ -20,6 +56,12 @@ body {
     background-color: white;
     position: absolute;
     bottom: 0px;
+    font-size: 5vw;
+    text-align: center;
+}
+.snow::after {
+    content: "Jacob Shomali";
+    animation: rainbowText 5s forwards infinite;
 }
 .trunk {
     width: 10vw;
@@ -47,8 +89,8 @@ body {
     position: absolute;
     top: 15vw;
     left: 3vw;
-    background-color: yellow;
     border-radius: 100%;
+    animation: rainbow 6s linear infinite;
 }
 .ornament2 {
     width: 2vw;
@@ -56,8 +98,8 @@ body {
     position: absolute;
     top: 12vw;
     right: 2vw;
-    background-color: aquamarine;
     border-radius: 100%;
+    animation: rainbow 6s 1s linear infinite;
 
 }
 .ornament3 {
@@ -66,8 +108,8 @@ body {
     position: absolute;
     top: 5vw;
     right: -1vw;
-    background-color: purple;
     border-radius: 100%;
+    animation: rainbow 6s 2s linear infinite;
 }
 .gift1 {
     width: 5vw;
@@ -76,6 +118,24 @@ body {
     position: absolute;
     bottom: 30vh;
     transform: translate(7.5vw);
+}
+.ribbon1 {
+    width: 1vw;
+    height: 5vw;
+    background-color: green;
+    transform: translateX(2vw);
+}
+.ribbon2 {
+    width: 1vw;
+    height: 5vw;
+    background-color: purple;
+    transform: translateX(2vw);
+}
+.ribbon3 {
+    width: 1vw;
+    height: 5vw;
+    background-color: red;
+    transform: translateX(2vw);
 }
 .gift2 {
     width: 5vw;
@@ -92,4 +152,24 @@ body {
     position: absolute;
     bottom: 30vh;
     transform: translateX(7.5vw) translateY(-5vw);
+}
+@keyframes rainbow {
+    0% { background-color: red;}
+    33% { background-color: purple;}
+    66% { background-color: yellow;}
+    100% { background-color: red;}
+}
+@keyframes rainbowText {
+    0% { color: red;}
+    33% { color: purple;}
+    66% { color: yellow;}
+    100% { color: red;}
+}
+@keyframes descent {
+    0% { top: 0vh }
+    20% { transform: translateX(-1vw); }
+    40% { transform: translateX(1vw); }
+    60% { transform: translateX(-1vw); }
+    80% { transform: translateX(1vw); }
+    100% { top: 70vh }
 }
