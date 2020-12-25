@@ -35,7 +35,7 @@
     top: calc(15 * var(--base-measure));
     left: calc(3 * var(--base-measure));
     border-radius: 100%;
-    animation: rainbow 6s linear infinite;
+    animation: rainbow 8s linear infinite;
 }
 .ornament2 {
     width: calc(2 * var(--base-measure));
@@ -44,7 +44,7 @@
     top: calc(13 * var(--base-measure));
     right: calc(2 * var(--base-measure));
     border-radius: 100%;
-    animation: rainbow 6s 1s linear infinite;
+    animation: rainbow 8s -2s linear infinite;
 
 }
 .ornament3 {
@@ -54,7 +54,7 @@
     top: calc(5 * var(--base-measure));
     right:calc(-1 * var(--base-measure));
     border-radius: 100%;
-    animation: rainbow 6s 2s linear infinite;
+    animation: rainbow 8s -4s linear infinite;
 }
 .gift1 {
     width: calc(5 * var(--base-measure));
@@ -131,7 +131,7 @@ body {
     border-radius: 100%;    
     position: absolute;
     right: 25vw;
-    animation: descent 5s 2s linear infinite forwards;
+    animation: descent 5s -2s linear infinite forwards;
 }
 .snowFlake3 {
     width: 1vw;
@@ -140,7 +140,7 @@ body {
     border-radius: 100%;    
     position: absolute;
     right: 35vw;
-    animation: descent 5s 3s linear infinite forwards;
+    animation: descent 5s -3s linear infinite forwards;
 }
 .snowFlake4 {
     width: 1vw;
@@ -149,7 +149,7 @@ body {
     border-radius: 100%;    
     position: absolute;
     right: 70vw;
-    animation: descent 5s 4s linear infinite forwards;
+    animation: descent 5s -4s linear infinite forwards;
 }
 .snow {
     height: 30vh;
@@ -166,16 +166,24 @@ body {
 }
 
 @keyframes rainbow {
-    0% { background-color: red;}
-    33% { background-color: purple;}
-    66% { background-color: yellow;}
-    100% { background-color: red;}
+    0% { background-color: purple;}
+    14% { background-color: indigo;}
+    28% { background-color: blue;}
+    42% { background-color: green;}
+    56% { background-color: yellow;}
+    75% { background-color: orange;}
+    84% { background-color: red;}
+    100% { color: purple;}
 }
 @keyframes rainbowText {
-    0% { color: red;}
-    33% { color: purple;}
-    66% { color: yellow;}
-    100% { color: red;}
+    0% { color: purple;}
+    14% { color: indigo;}
+    28% { color: blue;}
+    42% { color: green;}
+    56% { color: yellow;}
+    70% { color: orange;}
+    84% { color: red;}
+    100% { color: purple;}
 }
 @keyframes descent {
     0% { top: 0vh }
