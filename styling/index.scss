@@ -3,8 +3,8 @@
 @import "./variables";
 
 .trunk {
-    width: 10 * $baseMeasure;
-    height: 20 * $baseMeasure;
+    width: 10 * var(--base-measure);
+    height: 20 * var(--base-measure);
     background: $trunkColor;
     position: absolute;
     bottom: 30vh;
@@ -44,42 +44,40 @@ body {
     height: 0px;
     position: absolute;
     top: -12vw;
-    left: -10 * $baseMeasure;
-    border-bottom: 20 * $baseMeasure solid green;
-    border-left: 15 * $baseMeasure solid transparent;
-    border-right: 15 * $baseMeasure solid transparent;
+    left: -10 * var(--base-measure);
+    border-bottom: 20 * var(--base-measure) solid green;
+    border-left: 15 * var(--base-measure) solid transparent;
+    border-right: 15 * var(--base-measure) solid transparent;
     border-top: 0vw solid transparent;
     z-index: 2;
 }
 .ornament1 {
     @include ornaments(0s);
-    top: 15 * $baseMeasure;
-    left: 3 * $baseMeasure;
+    top: 15 * var(--base-measure);
+    left: 3 * var(--base-measure);
 }
 .ornament2 {
     @include ornaments(-2s);
-    top: 13 * $baseMeasure;
-    right: 2 * $baseMeasure;
+    top: 13 * var(--base-measure);
+    right: 2 * var(--base-measure);
 
 }
 .ornament3 {
     @include ornaments(-4s);
-    top: 5 * $baseMeasure;
-    right: -1 * $baseMeasure;
+    top: 5 * var(--base-measure);
+    right: -1 * var(--base-measure);
 }
 .gift1 {
     @include gift(red);
-    transform: translate(7.5 * $baseMeasure);
+    transform: translate(7.5 * var(--base-measure));
 }
 .gift2 {
-    
     @include gift(green);
-    transform: translate(-7.5 * $baseMeasure);
+    transform: translate(-7.5 * var(--base-measure));
 }
 .gift3 {
-    
     @include gift(purple);
-    transform: translateX(7.5 * $baseMeasure) translateY(-5 * $baseMeasure);
+    transform: translateX(7.5 * var(--base-measure)) translateY(-5 * var(--base-measure));
 }
 .ribbon1 {
     @include ribbon(green);
