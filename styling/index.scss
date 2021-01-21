@@ -1,0 +1,106 @@
+@import "./animations";
+@import "./repeats";
+@import "./variables";
+
+.trunk {
+    width: 10 * $baseMeasure;
+    height: 20 * $baseMeasure;
+    background: $trunkColor;
+    position: absolute;
+    bottom: 30vh;
+    z-index: 1;
+}
+.moon {
+    width: 10vw;
+    height: 10vw;
+    background: $moonColor;
+    border-radius: 100%;
+    position: absolute;
+    top: 5vh;
+    left: 5vh;
+}
+.snow {
+    height: 30vh;
+    width: 100vw;
+    background: $snowColor;
+    position: absolute;
+    bottom: 0px;
+    font-size: 5vw;
+    text-align: center;
+}
+.snow::after {
+    content: "Jacob Shomali";
+    animation: rainbowText 5s forwards infinite;
+}
+body {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-content: center;
+    background: $skyColor;
+}
+.leaves {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -12vw;
+    left: -10 * $baseMeasure;
+    border-bottom: 20 * $baseMeasure solid green;
+    border-left: 15 * $baseMeasure solid transparent;
+    border-right: 15 * $baseMeasure solid transparent;
+    border-top: 0vw solid transparent;
+    z-index: 2;
+}
+.ornament1 {
+    @include ornaments(0s);
+    top: 15 * $baseMeasure;
+    left: 3 * $baseMeasure;
+}
+.ornament2 {
+    @include ornaments(-2s);
+    top: 13 * $baseMeasure;
+    right: 2 * $baseMeasure;
+
+}
+.ornament3 {
+    @include ornaments(-4s);
+    top: 5 * $baseMeasure;
+    right: -1 * $baseMeasure;
+}
+.gift1 {
+    @include gift(red);
+    transform: translate(7.5 * $baseMeasure);
+}
+.gift2 {
+    
+    @include gift(green);
+    transform: translate(-7.5 * $baseMeasure);
+}
+.gift3 {
+    
+    @include gift(purple);
+    transform: translateX(7.5 * $baseMeasure) translateY(-5 * $baseMeasure);
+}
+.ribbon1 {
+    @include ribbon(green);
+}
+.ribbon2 {
+    @include ribbon(purple);
+}
+.ribbon3 {
+    @include ribbon(red);
+}
+
+.snowFlake1 {
+    @include snowflake(15vw, 0s);
+}
+.snowFlake2 {
+    @include snowflake(25vw, -2s);
+}
+.snowFlake3 {
+    @include snowflake(35vw, -3s);
+}
+.snowFlake4 {
+    @include snowflake(70vw, -4s);
+}
+
